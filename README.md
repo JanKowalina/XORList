@@ -1,25 +1,47 @@
-Certainly! Here's an updated version of the README file that includes all the examples:
+# XOR List
 
-# Bidirectional List
+## Description
 
-This program implements a bidirectional list that uses XOR of addresses to store predecessor and successor information in each node. This reduces the memory usage by approximately 50% compared to a classic bidirectional list that stores actual addresses.
+This program implements a bidirectional XOR list, which stores the XOR values of predecessor and successor addresses in nodes. It reduces memory usage by approximately 50% compared to a traditional doubly linked list.
 
-## List Functionality
+The program provides various functionalities to manipulate the XOR list, including adding elements to the beginning or end, adding an element before the currently selected element, deleting elements, and navigating through the list.
 
-The implemented bidirectional list provides the following functionalities:
+## Compilation and Execution
 
-- `ACTUAL`: Returns the value of the currently pointed element. For an empty list, it returns NULL. After adding the first element to the list, `ACTUAL` returns the value of that element until it is moved by other operations.
-- `NEXT`: Prints the value of the successor of the currently pointed element and sets the pointer to the successor as the new current element. If the current element is the last element in the list, its successor will be the first element.
-- `PREV`: Prints the value of the predecessor of the currently pointed element and sets the pointer to the predecessor as the new current element. If the current element is the first element in the list, its predecessor will be the last element.
-- `ADD_BEG N`: Adds an element with value N to the beginning of the list.
-- `ADD_END N`: Adds an element with value N to the end of the list.
-- `ADD_ACT N`: Adds an element with value N as the predecessor of the currently selected element (`ACTUAL`).
+To compile the program, follow these steps:
+
+1. Use a C++ compiler (such as g++) to compile the code:
+
+   ```shell
+   g++ -o XORList XORList.cpp
+   ```
+
+2. Run the program using the following command:
+
+   ```shell
+   ./XORList
+   ```
+
+   The program will start running and wait for user input.
+
+## Usage
+
+After running the program, you can interact with the XOR list by entering various commands. Here are the available commands:
+
+- `ACTUAL`: Displays the value of the currently selected element.
+- `NEXT`: Moves the selection to the next element and displays its value.
+- `PREV`: Moves the selection to the previous element and displays its value.
+- `ADD_BEG N`: Adds an element with value `N` to the beginning of the list.
+- `ADD_END N`: Adds an element with value `N` to the end of the list.
+- `ADD_ACT N`: Adds an element with the value `N` before the currently selected element.
 - `DEL_BEG`: Removes the first element from the list.
 - `DEL_END`: Removes the last element from the list.
-- `DEL_VAL N`: Removes all nodes from the list whose value is equal to N.
-- `DEL_ACT`: Removes the node pointed to by `ACTUAL` and sets `ACTUAL` to the predecessor. If the predecessor does not exist (i.e., the current element is the first element), `ACTUAL` will point to the last element of the list.
+- `DEL_VAL N`: Removes all elements with the value `N` from the list.
+- `DEL_ACT`: Removes the currently selected element and moves the selection to the previous element (or the last element if the previous doesn't exist).
 - `PRINT_FORWARD`: Prints the contents of the list from the first to the last element.
 - `PRINT_BACKWARD`: Prints the contents of the list from the last to the first element.
+
+Enter the commands one by one and observe the output to see the effects on the XOR list.
 
 ## Input and Output
 
